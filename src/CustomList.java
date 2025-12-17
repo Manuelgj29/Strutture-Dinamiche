@@ -95,12 +95,54 @@
         if(index < 0 || index >= size()){
             throw new indexOutOfBoundsException("Invalido");
         }
+
         if(index == 0){
             head = head.getNext();
         }else if (index > 0){
             Node prev = get(index - 1);
             Node toRemove = prev.getNext();
             prev.setNext(toRemove.getNext());
+        }
+    }
+
+    public int indexOf (Node n){
+        Node cursor = head;
+        int index = 0;
+        while (cursor != null){
+            if (cursor.equals(n)){
+                return index;
+            cursor = cursor.getNext();
+            index++;
+            }
+        }
+
+        return -1;
+    }
+
+    public void set(int index, Node n){
+        Node cursor = head;
+        if(index = 0){
+            head = n;
+        }else if(index > 0){
+            Node prev = get(index - 1);
+            prev.setNext(n);
+        }
+    }
+
+    public boolean contains(Node n){
+        Node cursor = head;
+        int index = 0;
+        while(true){
+            Node m = get(index + 1)
+            if(m.equals(n)){
+                return true
+            }else{
+                index++;
+            }
+
+            if(index.equals(size())){
+                return false;
+            }
         }
     }
 }
