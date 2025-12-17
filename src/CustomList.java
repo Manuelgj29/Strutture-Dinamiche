@@ -93,11 +93,11 @@
     // Write the remove method that removes a node by its index
     public void remove(int index) throws indexOutOfBoundsException{
         if(index < 0 || index >= size()){
-            throw new indexOutOfBoundsException("invalid index");
+            throw new indexOutOfBoundsException("Invalido");
         }
         if(index == 0){
             head = head.getNext();
-        }else{
+        }else if (index > 0){
             Node prev = get(index - 1);
             Node toRemove = prev.getNext();
             prev.setNext(toRemove.getNext());
