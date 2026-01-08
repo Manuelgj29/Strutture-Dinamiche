@@ -145,4 +145,11 @@
             }
         }
     }
+
+    public boolean containtsOut(Node cursor, Node n){
+        if(n.equals(head)){
+            return true;
+        }
+        retunr n.equals(head.getNext());
+    } 
 }
